@@ -145,7 +145,7 @@ public class NewTalent_RU_Other {
         pageResources.getNewTalentPage().signOut();
 
         File writeFile = new File("C:/vodka/talentData.txt");
-        PrintWriter pw = new PrintWriter(writeFile);
+        PrintWriter pw = new PrintWriter(writeFile); //creating new instance of PrintWriter
         pw.println(firstName);
         pw.println(middleName);
         pw.println(lastName);

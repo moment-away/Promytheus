@@ -101,7 +101,7 @@ public class NewTalent_RU_Other {
         pageResources.getNewTalentPage().enterPhone(phone); //enter phone number
         pageResources.getNewTalentPage().addSocialAccount(); //click link to add social account
         pageResources.getNewTalentPage().openSocialAccsDropdown(); //open dropdown list with social networks
-        pageResources.getNewTalentPage().addFacebookAccount(); //choose Facebook frfom the dropdown list
+        pageResources.getNewTalentPage().addFacebookAccount(); //choose Facebook from the dropdown list
         pageResources.getNewTalentPage().enterFacebookAccount(socialAccount); //enter Facebook account
         pageResources.getNewTalentPage().enterHeight(height); //enter height
         pageResources.getNewTalentPage().enterWeight(weight); //enter weight
@@ -110,121 +110,116 @@ public class NewTalent_RU_Other {
         pageResources.getNewTalentPage().chooseIfCoached(); //choose if talent was coached
         pageResources.getNewTalentPage().chooseTypeOfTraining(); //choose type of training
         pageResources.getNewTalentPage().enterSchoolName(college); //enter school or college name
-        pageResources.getNewTalentPage().enterSuccessLevel(successLevel); 
-        pageResources.getNewTalentPage().chooseSkillsLevel();
+        pageResources.getNewTalentPage().enterSuccessLevel(successLevel); //enter academic success level
+        pageResources.getNewTalentPage().chooseSkillsLevel(); //choose skills level
         pageResources.getNewTalentPage().clickNextButton(); //click Next button
-        pageResources.getNewTalentPage().chooseTestimonies();
-        pageResources.getNewTalentPage().enterTestimony(evidence);
-        pageResources.getNewTalentPage().enterWorkProduct(workProduct);
+        pageResources.getNewTalentPage().chooseTestimonies(); //choose source of testimonies (family, friends, etc.)
+        pageResources.getNewTalentPage().enterTestimony(evidence); //enter testimony 
+        pageResources.getNewTalentPage().enterWorkProduct(workProduct); //enter work product 
         pageResources.getNewTalentPage().clickNextButton(); //click Next button
-        pageResources.getNewTalentPage().chooseFamilyIncome();
-        pageResources.getNewTalentPage().enterFamilyIncome (income);
+        pageResources.getNewTalentPage().chooseFamilyIncome(); //choose level of family income 
+        pageResources.getNewTalentPage().enterFamilyIncome (income); //enter amount of family income 
         pageResources.getNewTalentPage().clickNextButton(); //click Next button
-        pageResources.getNewTalentPage().enterHeadline(headline);
-        pageResources.getNewTalentPage().enterYears(years);
-        pageResources.getNewTalentPage().chooseInterestLevel();
+        pageResources.getNewTalentPage().enterHeadline(headline); //enter headline 
+        pageResources.getNewTalentPage().enterYears(years); //enter age when talent was discovered 
+        pageResources.getNewTalentPage().chooseInterestLevel();  //choose interest level 
         pageResources.getNewTalentPage().clickNextButton(); //click Next button
-        pageResources.getNewTalentPage().enterGutFeel(gutFeel);
-        pageResources.getNewTalentPage().enterRationale(rationale);
-        Thread.sleep(1000);
-        pageResources.getNewTalentPage().enterScore(score);
-        Thread.sleep(1000);
-        pageResources.getNewTalentPage().enterRank(rank);
+        pageResources.getNewTalentPage().enterGutFeel(gutFeel); //enter gut feel about talent 
+        pageResources.getNewTalentPage().enterRationale(rationale); //enter rational reason for gut feel
+        pageResources.getNewTalentPage().enterScore(score); //enter score 
+        pageResources.getNewTalentPage().enterRank(rank); //enter relative rank among other talents 
         pageResources.getNewTalentPage().clickNextButton(); //click Next button
-        Thread.sleep(1000);
-        pageResources.getNewTalentPage().selectTalentTrait1(talentTrait1);
-        pageResources.getNewTalentPage().selectTalentTrait2(talentTrait2);
-        pageResources.getNewTalentPage().selectTalentTrait3(talentTrait3);
+        pageResources.getNewTalentPage().selectTalentTrait1(talentTrait1); //enter one of talent traits
+        pageResources.getNewTalentPage().selectTalentTrait2(talentTrait2); //enter one of talent traits
+        pageResources.getNewTalentPage().selectTalentTrait3(talentTrait3); //enter one of talent traits
         pageResources.getNewTalentPage().clickNextButton(); //click Next button
-        pageResources.getNewTalentPage().selectPersonalityTrait1();
-        pageResources.getNewTalentPage().selectPersonalityTrait2();
-        pageResources.getNewTalentPage().selectPersonalityTrait3();
+        pageResources.getNewTalentPage().selectPersonalityTrait1(); //select one of personal traits
+        pageResources.getNewTalentPage().selectPersonalityTrait2(); //select one of personal traits
+        pageResources.getNewTalentPage().selectPersonalityTrait3(); //select one of personal traits
         pageResources.getNewTalentPage().clickNextButton(); //click Next button
         pageResources.getNewTalentPage().clickFinishButton(); //click Finish button
-        pageResources.getNewTalentPage().clickMyProfileIcon();
-        pageResources.getNewTalentPage().signOut();
-
-        File writeFile = new File("C:/vodka/talentData.txt");
+        pageResources.getNewTalentPage().clickMyProfileIcon(); //click My Profile icon
+        pageResources.getNewTalentPage().signOut(); //sign out from the account 
+        //this block creates new files to store randomly generated data while executing this test case with the purpose of using them in the following test cases
+        File writeFile = new File("C:/vodka/talentData.txt"); //constructor, specifying the path to the directory, where file should be created
         PrintWriter pw = new PrintWriter(writeFile); //creating new instance of PrintWriter
-        pw.println(firstName);
-        pw.println(middleName);
-        pw.println(lastName);
-        pw.println(address);
-        pw.println(newEmail);
-        pw.println(placeOfBirth);
-        pw.println(socialAccount);
-        pw.println(height);
-        pw.println(weight);
-        pw.println(college);
-        pw.println(evidence);
-        pw.println(income);
-        pw.println(headline);
-        pw.println(rationale);
-        pw.close();
+        pw.println(firstName); //write first name into the file 
+        pw.println(middleName); //write middle name into the file 
+        pw.println(lastName);  //write last name into the file
+        pw.println(address); //write address into the file 
+        pw.println(newEmail); //write talent's email into the file
+        pw.println(placeOfBirth); //write place of birth into the file
+        pw.println(socialAccount); //write social account into the file
+        pw.println(height); //write height into the file
+        pw.println(weight); //write weight into the file
+        pw.println(college); //write college into the file
+        pw.println(evidence); //write testimony into the file
+        pw.println(income); //write income into the file
+        pw.println(headline); //write headline into the file
+        pw.println(rationale); //write rationale into the file
+        pw.close(); //close PrintWriter
 
-        File readFile = new File("C:/vodka/doc.txt");
+        File readFile = new File("C:/vodka/doc.txt"); //constructor, specifying the path to the directory, where file is stored and should be read from
         try
         {
-            Scanner s = new Scanner(readFile);
-            s.useDelimiter("\\n");
-            pageResources.getLoginPage().enterLoginEmail(s.nextLine());
-            pageResources.getLoginPage().enterPassword(s.nextLine());
-            pageResources.getLoginPage().clickLoginButton();
-            s.close();
+            Scanner s = new Scanner(readFile); //creating a new instance of Scanner
+            s.useDelimiter("\\n"); //using delimiter to split data into separate lines
+            pageResources.getLoginPage().enterLoginEmail(s.nextLine()); //read email from the file
+            pageResources.getLoginPage().enterPassword(s.nextLine()); //read password from the file
+            pageResources.getLoginPage().clickLoginButton(); //click Login button
+            s.close(); //close Scanner
         }
         catch (FileNotFoundException e)
         {
             e.printStackTrace();
         }
-        pageResources.getNewTalentPage().selectLastTalent();
-        Thread.sleep(2000);
-        pageResources.getNewTalentPage().clickNextButton();
-        Thread.sleep(1000);
-        File readFile1 = new File("C:/vodka/talentData.txt");
+        pageResources.getNewTalentPage().selectLastTalent(); //select last added talent 
+        pageResources.getNewTalentPage().clickNextButton(); //click Next button 
+        File readFile1 = new File("C:/vodka/talentData.txt"); //constructor, specifying the path to the directory, where file is stored and should be read from
         try
         {
-            Scanner s = new Scanner(readFile1);
-            s.useDelimiter("\\n");
-            Assert.assertEquals(pageResources.getNewTalentPage().firstNameField.getAttribute("value"), s.nextLine());
-            System.out.println("First name matches");
-            Assert.assertEquals(pageResources.getNewTalentPage().middleNameField.getAttribute("value"), s.nextLine());
-            System.out.println("Middle name matches");
-            Assert.assertEquals(pageResources.getNewTalentPage().lastNameField.getAttribute("value"), s.nextLine());
-            System.out.println("Last name matches");
-            Assert.assertEquals(pageResources.getNewTalentPage().addressField.getAttribute("value"), s.nextLine());
-            System.out.println("Address matches");
-            Assert.assertEquals(pageResources.getNewTalentPage().emailField.getAttribute("value"), s.nextLine());
-            System.out.println("Email matches");
-            Assert.assertEquals(pageResources.getNewTalentPage().placeOfBirthField.getAttribute("value"), s.nextLine());
-            System.out.println("Place of birth matches");
-            Assert.assertEquals(pageResources.getNewTalentPage().facebookAccount.getAttribute("value"), s.nextLine());
-            System.out.println("Facebook account matches");
-            Assert.assertEquals(pageResources.getNewTalentPage().heightField.getAttribute("value"), s.nextLine());
-            System.out.println("Height matches");
-            Assert.assertEquals(pageResources.getNewTalentPage().weightField.getAttribute("value"), s.nextLine());
-            System.out.println("Weight matches");
-            pageResources.getNewTalentPage().clickNextButton();
-            Assert.assertEquals(pageResources.getNewTalentPage().schoolNameField.getAttribute("value"), s.nextLine());
-            System.out.println("School name matches");
-            pageResources.getNewTalentPage().clickNextButton();
-            Assert.assertEquals(pageResources.getNewTalentPage().testimonyField.getAttribute("value"), s.nextLine());
-            System.out.println("Testimony text matches");
-            pageResources.getNewTalentPage().clickNextButton();
-            Assert.assertEquals(pageResources.getNewTalentPage().familyIncomeField.getAttribute("value"), s.nextLine());
-            System.out.println("Income amount matches");
-            pageResources.getNewTalentPage().clickNextButton();
-            Assert.assertEquals(pageResources.getNewTalentPage().headlineField.getAttribute("value"), s.nextLine());
-            System.out.println("Headline matches");
-            pageResources.getNewTalentPage().clickNextButton();
-            Assert.assertEquals(pageResources.getNewTalentPage().talentRationaleField.getAttribute("value"), s.nextLine());
-            System.out.println("Rationale for gut feel matches");
-            pageResources.getNewTalentPage().clickNextButton();
-            s.close();
+            Scanner s = new Scanner(readFile1);  //creating a new instance of Scanner
+            s.useDelimiter("\\n"); //using delimiter to split data into separate lines
+            Assert.assertEquals(pageResources.getNewTalentPage().firstNameField.getAttribute("value"), s.nextLine()); //assert that stored and entered first names match
+            System.out.println("First name matches"); //print message to the console if first name matches
+            Assert.assertEquals(pageResources.getNewTalentPage().middleNameField.getAttribute("value"), s.nextLine()); //assert that stored and entered middle names match
+            System.out.println("Middle name matches"); //print message to the console if middle name matches
+            Assert.assertEquals(pageResources.getNewTalentPage().lastNameField.getAttribute("value"), s.nextLine()); //assert that stored and entered last names match
+            System.out.println("Last name matches"); //print message to the console if last name matches
+            Assert.assertEquals(pageResources.getNewTalentPage().addressField.getAttribute("value"), s.nextLine()); //assert that stored and entered addresses match
+            System.out.println("Address matches"); //print message to the console if address matches
+            Assert.assertEquals(pageResources.getNewTalentPage().emailField.getAttribute("value"), s.nextLine()); //assert that stored and entered emails match
+            System.out.println("Email matches"); //print message to the console if email matches
+            Assert.assertEquals(pageResources.getNewTalentPage().placeOfBirthField.getAttribute("value"), s.nextLine()); //assert that stored and entered places of birth match
+            System.out.println("Place of birth matches"); //print message to the console if place of birth matches
+            Assert.assertEquals(pageResources.getNewTalentPage().facebookAccount.getAttribute("value"), s.nextLine()); //assert that stored and entered Facebook accounts match
+            System.out.println("Facebook account matches"); //print message to the console if Facebook account matches
+            Assert.assertEquals(pageResources.getNewTalentPage().heightField.getAttribute("value"), s.nextLine()); //assert that stored and entered height matches
+            System.out.println("Height matches"); //print message to the console if height matches
+            Assert.assertEquals(pageResources.getNewTalentPage().weightField.getAttribute("value"), s.nextLine()); //assert that stored and entered weight matches
+            System.out.println("Weight matches"); //print message to the console if weight matches
+            pageResources.getNewTalentPage().clickNextButton(); //click Next button
+            Assert.assertEquals(pageResources.getNewTalentPage().schoolNameField.getAttribute("value"), s.nextLine()); //assert that stored and entered school name matches
+            System.out.println("School name matches"); //print message to the console if school name matches
+            pageResources.getNewTalentPage().clickNextButton(); //click Next Button
+            Assert.assertEquals(pageResources.getNewTalentPage().testimonyField.getAttribute("value"), s.nextLine()); //assert that stored and entered testimony matches
+            System.out.println("Testimony text matches"); //print message to the console if testimony matches
+            pageResources.getNewTalentPage().clickNextButton(); //click Next button
+            Assert.assertEquals(pageResources.getNewTalentPage().familyIncomeField.getAttribute("value"), s.nextLine()); //assert that stored and entered income matches
+            System.out.println("Income amount matches"); //print message to the console if income amount matches
+            pageResources.getNewTalentPage().clickNextButton(); //click Next button
+            Assert.assertEquals(pageResources.getNewTalentPage().headlineField.getAttribute("value"), s.nextLine()); //assert that stored and entered headline macthes
+            System.out.println("Headline matches"); //print message to the console if headline matches
+            pageResources.getNewTalentPage().clickNextButton(); //click Next button
+            Assert.assertEquals(pageResources.getNewTalentPage().talentRationaleField.getAttribute("value"), s.nextLine()); //assert that stored and entered rationale matches
+            System.out.println("Rationale for gut feel matches"); //print message to the console if rationale matches 
+            pageResources.getNewTalentPage().clickNextButton(); //click Next button
+            s.close(); //close Scanner 
         }
         catch (AssertionError e)
         {
             e.printStackTrace();
-            Assert.fail("Info does not match!");
+            Assert.fail("Info does not match!"); //print message to the console if assertions fail, end info does not match 
         }
     }
 }
